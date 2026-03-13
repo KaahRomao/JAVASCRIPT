@@ -51,5 +51,9 @@ Data da entrega: até 19/03/2026 */
 // 10- Crie uma função que permita ao usuário atualizar as informações de um produto existente no estoque, solicitando o id do produto e as novas informações a serem atualizadas.
 
 
+//Exercicio 1
+//console.log(produtos)
 
-console.table(produtos);
+//Exercicio 2
+let produtosCurva = produtos.filter ((produto) => produto.curva_abc == "B")
+console.table(produtosCurva)

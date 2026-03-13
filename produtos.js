@@ -102,9 +102,9 @@ export let produtos = [
 ];
 // console.table(produtos);
 
- produtos.push({ id: 101, nome: "Água de Coco", preco_venda: 1.59, preco_compra: 0.8, estoque: 500, rotatividade: "alta", curva_abc: "B" });
+ //produtos.push({ id: 101, nome: "Água de Coco", preco_venda: 1.59, preco_compra: 0.8, estoque: 500, rotatividade: "alta", curva_abc: "B" });
 
- produtos.splice(13, 1);
+ //produtos.splice(13, 1);
 
 //console.table(produtos);
 
