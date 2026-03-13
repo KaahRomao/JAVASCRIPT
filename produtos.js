@@ -102,27 +102,27 @@ export let produtos = [
 ];
 // console.table(produtos);
 
- //produtos.push({ id: 101, nome: "Água de Coco", preco_venda: 1.59, preco_compra: 0.8, estoque: 500, rotatividade: "alta", curva_abc: "B" });
+ produtos.push({ id: 101, nome: "Água de Coco", preco_venda: 1.59, preco_compra: 0.8, estoque: 500, rotatividade: "alta", curva_abc: "B" });
 
- //produtos.splice(13, 1);
+ produtos.splice(13, 1);
 
-console.table(produtos);
+//console.table(produtos);
 
-// let nomes = produtos.map((produto) => produto.nome);
+let nomes = produtos.map((produto) => produto.nome);
 
-// let desconto = produtos.map((produto) => ({ ...produto, desconto: produto.preco_venda * 0.9 }));
+ let desconto = produtos.map((produto) => ({ ...produto, desconto: produto.preco_venda * 0.9 }));
 
 // console.table(desconto);
 
-//let custoEstoque = produtos.reduce((acumulador, produto) => acumulador + produto.preco_compra * produto.estoque, 0);
+let custoEstoque = produtos.reduce((acumulador, produto) => acumulador + produto.preco_compra * produto.estoque, 0);
 
 //console.log(custoEstoque.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }));
 
 // Quero saber quantos itens no total eu tenho em estoque
 // Depois quero saber o valor médio de compra de cada produto
 
-//let estoque = produtos.filter((produto) => produto.estoque <= 50);
+let estoque = produtos.filter((produto) => produto.estoque <= 50);
 //console.table(estoque);
 
-//let estoqueFind = produtos.find((produto) => produto.estoque <= 50); 
+let estoqueFind = produtos.find((produto) => produto.estoque <= 50); 
 //console.log(estoqueFind)
