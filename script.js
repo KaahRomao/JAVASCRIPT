@@ -76,10 +76,10 @@ function inserirDadosCurvaABC(dados) {
     console.log(evento);
   });
 
-  let ListarTodos = produtos.map((produtos) => {
-    return {
-      id: produtos.id,
-      nome: produtos.nome,
-    };
-  });
+  // let ListarTodos = produtos.map((produtos) => {
+  //   return {
+  //     id: produtos.id,
+  //     nome: produtos.nome,
+  //   };
+  // });
 }
