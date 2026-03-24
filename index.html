@@ -9,19 +9,25 @@
   <body>
     <fieldset id="fieldsetFuncoes">
       <legend>Gestão de Estoque</legend>
-      <div id="ContainerCurvaABC">
-        <div class="selecaoCurva">
-          <label for="A">Curva A</label>
-          <input class="btnCurva" type="radio" id="A" name="curvaABC" />
+      <div class="containers">
+        <p>Busca por Curva</p>
+        <div id="ContainerCurvaABC">
+          <div class="selecaoCurva">
+            <label for="A">Curva A</label>
+            <input class="btnCurva" type="radio" id="A" name="curvaABC" />
+          </div>
+          <div class="selecaoCurva">
+            <label for="B">Curva B</label>
+            <input class="btnCurva" type="radio" id="B" name="curvaABC" />
+          </div>
+          <div class="selecaoCurva">
+            <label for="C">Curva C</label>
+            <input class="btnCurva" type="radio" id="C" name="curvaABC" />
+          </div>
         </div>
-        <div class="selecaoCurva">
-          <label for="B">Curva B</label>
-          <input class="btnCurva" type="radio" id="B" name="curvaABC" />
-        </div>
-        <div class="selecaoCurva">
-          <label for="C">Curva C</label>
-          <input class="btnCurva" type="radio" id="C" name="curvaABC" />
-        </div>
+      </div>
+      <div class="containers">
+        <button id="btnlistarTodos">Listar todos os produtos</button>
       </div>
     </fieldset>
     <fieldset id="fieldsetDisplay">

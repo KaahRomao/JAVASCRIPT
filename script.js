@@ -3,7 +3,10 @@ import { produtos } from "./produtos.js";
 const elemento = {
   btnCurva: document.querySelectorAll(".btnCurva"),
   containerDisplay: document.querySelector("#containerDisplay"),
+  btnlistarTodos: document.getElementById("#ListaTodos"),
 };
+
+console.log(btnlistarTodos);
 
 console.log(elemento.containerDisplay);
 
@@ -22,6 +25,7 @@ function EstoqueABC(curva) {
 }
 
 function inserirDadosCurvaABC(dados) {
+  elemento.containerDisplay.innerHTML = "";
   //Cria um objeto para gerar os paragrafos (Ainda sem dados)
   let colunasGRID = {
     id: document.createElement("p"),
@@ -41,4 +45,41 @@ function inserirDadosCurvaABC(dados) {
     colunasGRID.preco_venda,
     colunasGRID.estoque,
   );
+
+  console.table(dados);
+  // Variavel para receber ados do tipo de curva ABC selecionado
+
+  let dadosFiltrados = dados;
+
+  dadosFiltrados.forEach((item) => {
+    let produto = {
+      id: item.id,
+      nome: item.nome,
+      preco_venda: item.preco_venda,
+      estoque: item.estoque,
+    };
+
+    let id = document.createElement("p");
+    let nome = document.createElement("p");
+    let preco_venda = document.createElement("p");
+    let estoque = document.createElement("p");
+
+    id.innerText = produto.id;
+    nome.innerText = produto.nome;
+    preco_venda.innerText = produto.preco_venda;
+    estoque.innerText = produto.estoque;
+
+    elemento.containerDisplay.append(id, nome, preco_venda, estoque);
+  });
+
+  elemento.btnlistarTodos.addEventListener("click", (evento) => {
+    console.log(evento);
+  });
+
+  let ListarTodos = produtos.map((produtos) => {
+    return {
+      id: produtos.id,
+      nome: produtos.nome,
+    };
+  });
 }
